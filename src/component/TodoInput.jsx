@@ -3,10 +3,12 @@ import React, { useState } from 'react'
 const axios = require('axios').default;
 function TodoInput() {
     const [todo, setTodo] = useState('')
+
     const handleClick = async () => {
        axios.post(`http://localhost:5000/todo`, {work:todo}).then(console.log); 
         
     }
+    
   return (
     <div>
         <label htmlFor="">todo: </label>
